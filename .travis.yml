@@ -2,4 +2,4 @@ branches:
   only:
     - Travistest    
 language: matlab
-script: matlab -batch 'runxunittests("dev/travis/core")'
+script: matlab -batch 'addpath(genpath(pwd));runxunittests("dev/travis/core")'
