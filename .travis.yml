@@ -2,4 +2,4 @@ branches:
   only:
     - Travistest    
 language: matlab
-script: matlab -batch 'disp("Hello World")'
+script: matlab -batch 'runxunittests("dev/travis/core")'
