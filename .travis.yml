@@ -4,7 +4,7 @@ branches:
 jobs:
   include:
     - stage: Test core
-    - os: linux
+      os: linux
       dist: bionic
       language: matlab
       script: matlab -batch 'addpath(genpath(pwd));runxunittests("dev/travis/core")'
