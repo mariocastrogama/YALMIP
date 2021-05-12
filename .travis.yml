@@ -3,12 +3,9 @@ branches:
     - Travistest    
 jobs:
   include:
+    - stage: Test core
     - os: linux
       dist: bionic
       language: matlab
       script: matlab -batch 'addpath(genpath(pwd));runxunittests("dev/travis/core")'
-  include:
-    - os: linux
-      dist: bionic
-      language: matlab
       script: matlab -batch 'addpath(genpath(pwd));runxunittests("dev/travis/operators")'      
