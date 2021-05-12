@@ -7,9 +7,9 @@ jobs:
       os: linux
       dist: bionic
       language: matlab
-      script: matlab -batch 'addpath(genpath(pwd));r=runtests("dev/travis/core");assert(~any([r.Failed]))'      
+      script: matlab -batch 'addpath(genpath(pwd));r=runtests("dev/travis/core");table(r);exit(~any([r.Failed]))'      
     - stage: Test core
       os: linux
       dist: bionic
       language: matlab      
-      script: matlab -batch 'addpath(genpath(pwd));r=runtests("dev/travis/operators");assert(~any([r.Failed]))'
+      script: matlab -batch 'addpath(genpath(pwd));r=runtests("dev/travis/operators");table(r);exit(~any([r.Failed]))'
